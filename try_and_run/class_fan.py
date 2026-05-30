@@ -7,12 +7,12 @@ class Fan:
     def __init__(self):
         self.__speed = Fan.SLOW
         self.__on = False
-        self.__raduis = 5      
+        self.__radius = 5
         self.__color = "blue"
 
     def display(self):
         print("Speed:", self.__speed)
-        print("Radius:", self.__radius)   
+        print("Radius:", self.__radius)
         print("Color:", self.__color)
         print("On:", self.__on)
         print()
