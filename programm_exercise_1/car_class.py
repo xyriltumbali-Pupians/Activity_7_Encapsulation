@@ -8,14 +8,14 @@ class Car:
 
     def accelerate(self):
         if self.__speed < self.__max_speed:
-        self.__speed += 5
+            self.__speed += 5
 
         else:
-         self.__speed = self.__max_speed
+            self.__speed = self.__max_speed
        
     def brake(self):
         if self.__speed >= 5:
-            self.__speed -= 5 
+           self.__speed -= 5 
         else:
             self.__speed = 0
 
@@ -25,13 +25,14 @@ class Car:
     def get_speed(self):
         return self.__speed
     
-    def show_infos(self):
-        print(f"Car: {self.make} {self.year_model}, Speed: {self.__speed} km/h")
+    def show_info(self):
+        return f"{self.year_model} {self.make} | Speed: {self.__speed} km/h"
 
-car = Car(2024, "Toyota")
-car.show_infos()
+car = Car(2026, "Toyota")
 
-print("Accelerating:")
+print(car.show_info())
+
+print("\nAccelerating:")
 for i in range(5):
     car.accelerate()
     print("Current speed:", car.get_speed())
@@ -40,3 +41,6 @@ print("\nBraking:")
 for i in range(5):
     car.brake()
     print("Current speed:", car.get_speed())
+
+print("\nFinal Info:")
+print(car.show_info())
