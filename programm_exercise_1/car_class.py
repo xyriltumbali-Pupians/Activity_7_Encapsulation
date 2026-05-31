@@ -4,18 +4,33 @@ class Car:
         self.year_model = year_model
         self.make = make
         self.__speed = 0
+        self.__max_speed = 120
 
     def accelerate(self):
+        if self.__speed < self.__max_speed:
         self.__speed += 5
 
+        else:
+         self.__speed = self.__max_speed
+       
     def brake(self):
-        self.__speed -= 5 
+        if self.__speed >= 5:
+            self.__speed -= 5 
+        else:
+            self.__speed = 0
+
+    def stop(self):
+        self.__speed = 0        
 
     def get_speed(self):
         return self.__speed
+    
+    def show_infos(self):
+        print(f"Car: {self.make} {self.year_model}, Speed: {self.__speed} km/h")
 
 car = Car(2024, "Toyota")
-    
+car.show_infos()
+
 print("Accelerating:")
 for i in range(5):
     car.accelerate()
