@@ -41,12 +41,35 @@ class Pet:
 while True:
     my_pet = Pet()
 
-    name = input("Enter your pet's name: )
-    animal_type = input("Enter your pet's type (Dog, Cat, Bird, etc.): ")
-    age = int(input("Enter your pet's age: "))
+    name = input(f"Enter your pet's name: ")
+    animal_type = input(f"Enter your pet's type (Dog, Cat, Bird, etc.): ")
+    age = int(input(f"Enter your pet's age: "))
 
     my_pet.set_name(name)
     my_pet.set_animal_type(animal_type)
     my_pet.set_age(age)
 
-    
+    history.append(my_pet)
+
+    another = input(f"Add another pet? (yes/no): ").lower()
+    if another != "yes":
+       break
+
+print("=== PET HISTORY ===")
+for i, pet in enumerate(history, start=1) 
+print(f"Pet {i}")
+print("Name:", pet.get_name())
+print("Animal Type:", pet.get_animal_type())
+print("Age:", pet.get_age())
+
+my_pet.set_name(name)
+my_pet.set_animal_type(animal_type)
+my_pet.set_name(name)
+my_pet.set_animal_type(animal_type)
+my_pet.set_age(age)
+
+history.append(my_pet)
+
+another = input(f"Add another pet? (yes/no): ").lower()
+if another != "yes":
+   break
