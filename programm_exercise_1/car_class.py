@@ -29,7 +29,9 @@ class Car:
     def show_info(self):
         return (
             f"Car: {self.year_model} {self.make}\n"
-            f"Current Speed: {self.__speed} km/h")
+            f"Current Speed: {self.__speed} km/h"
+            
+            )
     
 car = Car(2026, "Toyota")
 
